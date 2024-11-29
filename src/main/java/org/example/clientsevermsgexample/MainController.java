@@ -230,4 +230,25 @@ public class MainController implements Initializable {
         javafx.application.Platform.runLater(() -> lb122.setText(message + "\n"));
     }
 
+
+    @FXML
+    void user1_client(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(NetworkApplication.class.getResource("client-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setTitle("user1_client!");
+        stage.setScene(scene);
+        stage.showAndWait();
+    }
+
+    @FXML
+    void user2_server(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(NetworkApplication.class.getResource("server-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setTitle("user2_server!");
+        stage.setScene(scene);
+        stage.showAndWait();
+    }
+
 }
